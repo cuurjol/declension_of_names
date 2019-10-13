@@ -16,7 +16,5 @@
   person = Person.create(last_name: names_array[0], first_name: names_array[1], middle_name: names_array[2], sex: sex,
                          full_name: names_array.join(' '))
 
-  declension_name_params.merge(person: person)
-
   DeclensionName.create(declension_name_params.merge(person: person))
 end
