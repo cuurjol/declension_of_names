@@ -6,17 +6,22 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap_form'
 gem 'faker'
 gem 'jquery-rails'
+gem 'petrovich'
 gem 'pg', '>= 0.18', '< 2.0'
-gem "petrovich"
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
+gem 'rails-i18n'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara'
+  gem 'factory_bot_rails'
   gem 'pry-rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.8'
   gem 'rubocop'
 end
 
