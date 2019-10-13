@@ -1,0 +1,9 @@
+<h1>Новый человек</h1>
+
+<div class="row">
+  <div class="col-6">
+    <%= render('form', person: @person) %>
+  </div>
+</div>
+
+<%= link_to('Вернуться к списку людей', people_path) %>

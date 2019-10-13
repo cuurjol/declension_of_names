@@ -1,0 +1,7 @@
+<%= bootstrap_form_for(person) do |f| %>
+  <%= f.text_field :last_name, label: 'Фамилия' %>
+  <%= f.text_field :first_name, label: 'Имя' %>
+  <%= f.text_field :middle_name, label: 'Отчество' %>
+  <%= f.select :sex, [%w(Мужской Мужской), %w(Женский Женский)], label: 'Пол' %>
+  <%= f.submit "Сохранить", class: "btn btn-primary" %>
+<% end %>

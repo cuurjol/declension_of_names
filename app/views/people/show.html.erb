@@ -1,0 +1,41 @@
+<h2>Человек</h2>
+
+<div class="form-row">
+  <div class="col-4">
+    <div class="form-group">
+      <%= label_tag('last_name', 'Фамилия', class: 'font-weight-bold') %>
+      <%= text_field_tag 'last_name', @person.last_name, class: 'form-control', readonly: true %>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-group">
+      <%= label_tag('first_name', 'Имя', class: 'font-weight-bold') %>
+      <%= text_field_tag 'first_name', @person.first_name, class: 'form-control', readonly: true %>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-group">
+      <%= label_tag('middle_name', 'Отчество', class: 'font-weight-bold') %>
+      <%= text_field_tag 'middle_name', @person.middle_name, class: 'form-control', readonly: true %>
+    </div>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col-6">
+    <div class="form-group">
+      <%= label_tag('full_name', 'ФИО', class: 'font-weight-bold') %>
+      <%= text_field_tag 'full_name', @person.full_name, class: 'form-control', readonly: true %>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="form-group">
+      <%= label_tag('sex', 'Пол', class: 'font-weight-bold') %>
+      <%= text_field_tag 'sex', @person.sex, class: 'form-control', readonly: true %>
+    </div>
+  </div>
+</div>
+
+<%= render(partial: 'people/declension_name_table', locals: { person: @person }) %>
+
+<%= link_to('Редактировать информацию', edit_person_path(@person)) %> | <%= link_to('Вернуться к списку людей', people_path) %>

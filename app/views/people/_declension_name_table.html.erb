@@ -1,0 +1,26 @@
+<h2>Все склонения (Фамилия, Имя, Отчество)</h2>
+
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+  <tr>
+    <th>#</th>
+    <th>Падеж</th>
+    <th>Фамилия</th>
+    <th>Имя</th>
+    <th>Отчество</th>
+    <th>ФИО</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% Petrovich::CASES.reject { |i| i == :nominative }.each.with_index(1) do |name_case, index| %>
+    <tr>
+      <td><%= index %></td>
+      <td><%= declension_type(name_case) %></td>
+      <td><%= person.declension_name.public_send(name_case)[:last_name] %></td>
+      <td><%= person.declension_name.public_send(name_case)[:first_name] %></td>
+      <td><%= person.declension_name.public_send(name_case)[:middle_name] %></td>
+      <td><%= person.declension_name.public_send(name_case)[:full_name] %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

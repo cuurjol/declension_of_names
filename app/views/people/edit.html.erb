@@ -1,0 +1,9 @@
+<h1>Редактировать информацию о человеке</h1>
+
+<div class="row">
+  <div class="col-6">
+    <%= render('form', person: @person) %>
+  </div>
+</div>
+
+<%= link_to('Показать информацию о человеке', @person) %> | <%= link_to('Вернуться к списку людей', people_path) %>
